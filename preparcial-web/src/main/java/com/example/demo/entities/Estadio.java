@@ -15,10 +15,10 @@ public class Estadio {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
-	private int id;
+	private Integer id;
 	
 	private String nombre;
-	private int capacidad;
+	private Integer capacidad;
 	
 	@OneToMany(mappedBy = "estadio_id")
 	private List<Partido> partidos;

@@ -19,12 +19,12 @@ import lombok.NoArgsConstructor;
 public class Partido {
 	
 	@Id
-	private int id;
+	private Integer id;
 	
 	private Date fecha;
 	
 	@ManyToOne
-	@JoinColumn(name = "id")
+	@JoinColumn(name = "estadio_id")
 	private Estadio estadio_id;
 	
 	@OneToMany(mappedBy = "partido_id")

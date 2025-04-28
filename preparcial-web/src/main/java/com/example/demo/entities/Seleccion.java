@@ -21,16 +21,16 @@ public class Seleccion {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
-	private int id;
+	private Integer id;
 	
 	private String nombre;
 	
 	@ManyToOne
-	@JoinColumn(name = "id")
-	private Continente continente;
+	@JoinColumn(name = "continente_id")
+	private Continente continente_id;
 	
 	private String grupo;
 	
-	@OneToMany(mappedBy = "selecion_id")
+	@OneToMany(mappedBy = "seleccion_id")
 	private List<Resultado> resultados;
 }

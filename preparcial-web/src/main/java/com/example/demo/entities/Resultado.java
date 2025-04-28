@@ -19,17 +19,17 @@ public class Resultado {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
-	private int id;
+	private Integer id;
 	
 	@OneToOne
-	@JoinColumn(name = "id")
-	private Partido partido;
+	@JoinColumn(name = "partido_id")
+	private Partido partido_id;
 	
 	@ManyToOne
-	@JoinColumn(name = "id")
-	private Seleccion seleccion;
+	@JoinColumn(name = "seleccion_id")
+	private Seleccion seleccion_id;
 	
-	private int goles;
-	private int amarillas;
-	private int rojas;
+	private Integer goles;
+	private Integer amarillas;
+	private Integer rojas;
 }
