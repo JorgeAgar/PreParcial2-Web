@@ -24,7 +24,7 @@ public class Seleccion {
 	
 	@ManyToOne
 	@JoinColumn(name = "id")
-	private int continente_id;
+	private Continente continente;
 	
 	private String grupo;
 }

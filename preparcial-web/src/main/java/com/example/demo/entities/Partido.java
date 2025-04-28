@@ -23,5 +23,5 @@ public class Partido {
 	
 	@ManyToOne
 	@JoinColumn(name = "id")
-	private int estadio_id;
+	private Estadio estadio_id;
 }
