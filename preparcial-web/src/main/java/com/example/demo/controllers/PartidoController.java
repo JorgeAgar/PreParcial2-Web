@@ -1,6 +1,6 @@
 package com.example.demo.controllers;
 
-import com.example.demo.entities.Partido;
+import com.example.demo.dtos.PartidoDTO;
 import com.example.demo.services.PartidoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,17 +15,17 @@ public class PartidoController {
     private PartidoService service;
 
     @GetMapping
-    public List<Partido> getAll() {
+    public List<PartidoDTO> getAll() {
         return service.getAllPartidos();
     }
 
     @GetMapping("/{id}")
-    public Partido getById(@PathVariable int id) {
+    public PartidoDTO getById(@PathVariable int id) {
         return service.getPartidoById(id);
     }
 
     @PostMapping
-    public void create(@RequestBody Partido partido) {
+    public void create(@RequestBody PartidoDTO partido) {
         service.addPartido(partido);
     }
 

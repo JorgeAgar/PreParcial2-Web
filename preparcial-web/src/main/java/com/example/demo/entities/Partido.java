@@ -18,6 +18,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Partido {
 	
+	public Partido(Date fecha, Estadio estadio, List<Resultado> resultados) {
+		this.fecha = fecha;
+		this.estadio_id = estadio;
+		this.resultados = resultados;
+	}
+	
 	@Id
 	private Integer id;
 	
