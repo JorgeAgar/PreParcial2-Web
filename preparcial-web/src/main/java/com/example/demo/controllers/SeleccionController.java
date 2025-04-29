@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.entities.Seleccion;
+import com.example.demo.dtos.SeleccionDTO;
 import com.example.demo.services.SeleccionService;
 
 @RestController
@@ -22,17 +22,17 @@ public class SeleccionController {
 	SeleccionService selService;
 	
 	@GetMapping
-    public List<Seleccion> getAll() {
+    public List<SeleccionDTO> getAll() {
         return selService.getAllSelecciones();
     }
 
     @GetMapping("/{id}")
-    public Seleccion getById(@PathVariable int id) {
+    public SeleccionDTO getById(@PathVariable int id) {
         return selService.getSeleccionById(id);
     }
 
     @PostMapping
-    public void create(@RequestBody Seleccion seleccion) {
+    public void create(@RequestBody SeleccionDTO seleccion) {
         selService.addSeleccion(seleccion);
     }
 

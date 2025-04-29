@@ -18,6 +18,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Seleccion {
+	
+	public Seleccion(String nombre, Continente continente, String grupo, List<Resultado> resultados) {
+		this.nombre = nombre;
+		this.continente_id = continente;
+		this.grupo = grupo;
+		this.resultados = resultados;
+	}
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
