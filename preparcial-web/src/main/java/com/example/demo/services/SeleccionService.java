@@ -40,6 +40,16 @@ public class SeleccionService {
     	
         return selsDTO;
     }
+    
+    public List<SeleccionDTO> getSeleccionByGroup(String grupo) {
+    	List<SeleccionDTO> selecciones = getAllSelecciones();
+    	List<SeleccionDTO> seleccionesGrupo = new ArrayList<SeleccionDTO>();
+    	for(SeleccionDTO seleccion : selecciones) {
+    		if(seleccion.getGrupo().equalsIgnoreCase(grupo))
+    			seleccionesGrupo.add(seleccion);
+    	}
+    	return seleccionesGrupo;
+    }
 
     public SeleccionDTO getSeleccionById(int id) {
         Seleccion sel = repo.getReferenceById(id);

@@ -30,6 +30,11 @@ public class SeleccionController {
     public SeleccionDTO getById(@PathVariable int id) {
         return selService.getSeleccionById(id);
     }
+    
+    @GetMapping("/grupo/{grupo}")
+    public List<SeleccionDTO> getByGroup(@PathVariable String grupo) {
+    	return selService.getSeleccionByGroup(grupo);
+    }
 
     @PostMapping
     public void create(@RequestBody SeleccionDTO seleccion) {
