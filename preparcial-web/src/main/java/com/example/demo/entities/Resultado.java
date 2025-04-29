@@ -17,6 +17,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Resultado {
 	
+	public Resultado(Partido partido, Seleccion seleccion, int goles, int amarillas, int rojas) {
+		this.partido_id = partido;
+		this.seleccion_id = seleccion;
+		this.goles = goles;
+		this.amarillas = amarillas;
+		this.rojas = rojas;
+	}
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Integer id;
