@@ -1,6 +1,6 @@
 package com.example.demo.controllers;
 
-import com.example.demo.entities.Continente;
+import com.example.demo.dtos.ContinenteDTO;
 import com.example.demo.services.ContinenteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,17 +15,17 @@ public class ContinenteController {
     private ContinenteService service;
 
     @GetMapping
-    public List<Continente> getAll() {
+    public List<ContinenteDTO> getAll() {
         return service.getAllContinentes();
     }
 
     @GetMapping("/{id}")
-    public Continente getById(@PathVariable int id) {
+    public ContinenteDTO getById(@PathVariable int id) {
         return service.getContinenteById(id);
     }
 
     @PostMapping
-    public void create(@RequestBody Continente continente) {
+    public void create(@RequestBody ContinenteDTO continente) {
         service.addContinente(continente);
     }
 
