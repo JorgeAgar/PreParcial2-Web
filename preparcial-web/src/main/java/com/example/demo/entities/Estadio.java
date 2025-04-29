@@ -17,6 +17,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Estadio {
 	
+	public Estadio(String nombre, int capacidad, List<Partido> partidos) {
+		this.nombre = nombre;
+		this.capacidad = capacidad;
+		this.partidos = partidos;
+	}
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Integer id;
