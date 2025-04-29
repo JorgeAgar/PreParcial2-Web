@@ -53,7 +53,7 @@ public class PartidoService {
     	return partidoDTO;
     }
 
-    public void addPartido(PartidoDTO partidoDTO) {
+    public void addPartido(PartidoDTO partidoDTO) { //ignora el id pasado en el DTO, ya que se crea automáticamente.
     	List<Resultado> resultados = new ArrayList<Resultado>(partidoDTO.getIds_resultados().size());
     	for(int idResultado : partidoDTO.getIds_resultados()) {
     		resultados.add(resulRepo.getReferenceById(idResultado));

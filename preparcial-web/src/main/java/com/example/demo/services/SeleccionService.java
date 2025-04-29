@@ -50,7 +50,7 @@ public class SeleccionService {
     	return new SeleccionDTO(id, sel.getNombre(), sel.getContinente_id().getId(), sel.getGrupo(), idsResultados);
     }
 
-    public void addSeleccion(SeleccionDTO seleccionDTO) {
+    public void addSeleccion(SeleccionDTO seleccionDTO) { //ignora el id pasado en el DTO, ya que se crea automáticamente.
     	Continente continente = conRepo.getReferenceById(seleccionDTO.getContinente_id());
     	
     	List<Resultado> resultados = new ArrayList<Resultado>(seleccionDTO.getIds_resultados().size());

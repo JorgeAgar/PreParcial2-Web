@@ -41,7 +41,7 @@ public class ResultadoService {
     	return resultadoDTO;
     }
 
-    public void addResultado(ResultadoDTO resultadoDTO) {
+    public void addResultado(ResultadoDTO resultadoDTO) { //ignora el id pasado en el DTO, ya que se crea automáticamente.
         Resultado resultado = new Resultado(parRepo.getReferenceById(resultadoDTO.getPartido_id()), selRepo.getReferenceById(resultadoDTO.getSeleccion_id()), resultadoDTO.getGoles(), resultadoDTO.getAmarillas(), resultadoDTO.getRojas());
     	repo.save(resultado);
     }

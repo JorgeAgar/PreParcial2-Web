@@ -53,7 +53,7 @@ public class EstadioService {
     	return estadioDTO;
     }
 
-    public void addEstadio(EstadioDTO estadioDTO) {
+    public void addEstadio(EstadioDTO estadioDTO) { //ignora el id pasado en el DTO, ya que se crea automáticamente.
     	List<Partido> partidos = new ArrayList<Partido>(estadioDTO.getIds_partidos().size());
     	
     	for(int idPartido : estadioDTO.getIds_partidos()) {
